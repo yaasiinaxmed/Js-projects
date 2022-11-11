@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+}
+
+.container.dark {
+    background: #444444;
+}
+
+.card {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 420px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.container.dark .card {
+    background: #35383a;
+}
+
+.container .card .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.container .card .content  img{
+    width: 190px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    position: relative;
+    bottom: 17px;
+}
+
+.container .card .content .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    bottom: 14px;
+}
+
+.container .card .content .text h3 {
+    font-size: 1.4em;
+    color: #2f7fff;
+}
+
+.container .card .content .text h3 span {
+    font-size: .8em;
+    color: #888787;
+}
+
+.container.dark .card .content .text h3 span {
+    color: #8f8d8d;
+}
+
+.container .card  .content ul {
+    display: flex;
+    gap: 8px;
+}
+
+.container .card .content ul li {
+    list-style: none;
+}
+
+.container .card .content ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #e9f5ff;
+    text-decoration: none;
+    border-radius: 50%;
+    color: #2f7fff;
+    text-align: center;
+    position: relative;
+    transition: 0.5s;
+}
+
+.container.dark .card .content ul li a {
+    background: #4e5255
+}
+
+.container .card .content ul li a:hover {
+    color: white;
+}
+
+.container .card .content ul li a i {
+    z-index: 1000;
+}
+
+.container .card .content ul li a:before {
+    position: absolute; 
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #2f7fff;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.container .card .content ul li a:hover:before {
+    transform: scale(1);
+}
+
+.toggle {
+    position: relative;
+    top: -8px;
+    right: -120px;
+    width: 40px;
+    height: 40px;
+    background: #e9f5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #2f7fff;
+}
+.container.dark .toggle {
+    background: #4e5255;
+    font-size: 1.2em;
+}
+.toggle .bi-moon-fill{
+    display: none;
+} 
+
+.container.dark .toggle .bi-moon-fill {
+    display: block;
+}
+
+.container.dark .toggle .bi-brightness-high-fill {
+    display: none;
+}

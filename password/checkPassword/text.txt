@@ -1,0 +1,5 @@
+colorblue : #0077ff;
+colorred : #eb0c0c
+
+<i class="bi bi-eye-fill"></i>
+<i class="bi bi-eye-slash-fill"></i> 

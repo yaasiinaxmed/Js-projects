@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 24px; 
+}
+
+.form h1 {
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+.form .inputBox {
+    width: 100%;
+    position: relative;
+}
+
+.form .inputBox input{
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #0077ff;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+}
+
+.form .inputBox input:focus {
+    border-color: #0077ff;
+}
+
+.form .inputBox label {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    background: white;
+    padding: 0 2px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+   
+}
+
+.form .inputBox input:focus ~ label,
+.form .inputBox input:valid ~ label {
+   top: -10px;
+   color: #0077ff;
+   font-size: 14px;
+}
+
+.form .inputBox i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #0077ff;
+}
+
+.form .inputBox .bi-eye-fill {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.form .inputBox .bi-eye-slash-fill {
+    cursor: pointer;
+    visibility: hidden;
+}
+
+button {
+    width: 100%;
+    padding: 10px 15px;
+    background: #3482db;
+    color: white;
+    border: 1px solid #0077ff;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+button:focus {
+    background: #0077ff; 
+}
+

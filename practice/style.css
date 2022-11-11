@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4fcfc;
+}
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form {
+   padding: 30px 40px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #8d8b8b;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-control input:focus {
+    border: 1px solid #333;
+}
+
+.form-control i.bi-check2 {
+    position: absolute;
+    color: #01d60c;
+    bottom: 30px;
+    right: 10px;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+.form-control i.bi-x {
+    position: absolute;
+    color: #fa1a1a;
+    bottom: 30px;
+    right: 10px;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+.form-control small {
+    display: block;
+    color: #fa1a1a;
+    visibility: hidden;
+}
+
+.form .btn {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    background: #3699fc;
+    border: 2px solid #3699fc;
+    border-radius: 4px;
+    color: White;
+    cursor: pointer;
+}
+
+.form .btn:hover,
+.form .btn:focus {
+    background: #1b89f7;
+}
+
+.form-control.error input {
+    border: 1px solid #fa1a1a;
+}
+
+.form-control.error small {
+   visibility: visible;
+}
+
+.form-control.success input {
+    border: 1px solid #01d60c;
+}
