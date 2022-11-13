@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    background: white;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #0077ff;
+}
+
+.nav.active {
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    background: white;;
+    color: white;
+    margin-top: 30px;
+}

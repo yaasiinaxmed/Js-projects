@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Amiri" , serif;
+}
+
+body {
+    background: #f8f8f8;
+    direction: rtl;
+
+}
+
+.container {
+    max-width: 1250px;
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.player {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #0077ff, #080446);
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.player .Ayah {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 10px 0;
+    margin: 5px 0;
+}
+
+.player audio {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.player .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.player .buttons .icon {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: #0077ff;
+    cursor: pointer;
+}
+
+.container-surahs > div {
+    position: relative;
+    width: calc(100% - 90px);
+    background: white;
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    margin: 10px 0 ;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    counter-increment: Surah-number;
+    transition: 0.3s color easel;
+    cursor: pointer;
+}
+
+.container-surahs > div::after {
+    position: absolute;
+    content: counter(Surah-number);
+    width: 80px;
+    height: 80px;
+    background: inherit;
+    border-radius: 50%;
+    box-shadow: inherit;
+    top: 50%;
+    left: -90px;
+    transform: translateY(-50%);
+    transition: inherit;
+    line-height: 80px;
+    text-align: center;
+    font-size: 25px;
+    font-family: sans-serif;
+    color: #222;
+}
+
+.container-surahs > div::before {
+    position: absolute;
+    content: '';
+    border: 7px solid transparent;
+    border-right-color: #0077ff;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+}
+
+.container-surahs > div:hover,
+.container-surahs > div:hover::after {
+    background: linear-gradient(to bottom, #0077ff, #080446);
+    color: white;
+}
+
+.scrollTop {
+    position: fixed;
+    top: 700px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    color: #0077ff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+.scrollTop.active {
+    display: block;
+}
